@@ -15,10 +15,7 @@ Suffix="\033[0m"
 
 
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
-echo -e
 echo -e "${BlueCyan}              Menu Backup                   "
-echo -e
-echo -e "             huutvpn"
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo
 echo
@@ -37,11 +34,11 @@ read -p    "Pilih Nomor └╼>>> " bro
 
 if [ $bro = 1 ] || [ $bro = 1 ]
 then
-figlet "huutvpn" | lolcat
+figlet "backup" | lolcat
 backup
 echo "--------------------------------------------------------"
 echo
-echo "huutvpn scripted"
+echo "Terimakasih sudah menggunakan layanan Premium Huut-VPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -52,7 +49,7 @@ figlet "Restore" | lolcat
 restore
 echo "--------------------------------------------------------"
 echo
-echo "huutvpn scripted"
+echo "Terimakasih sudah menggunakan layanan Premium Huut-VPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -62,7 +59,7 @@ figlet "strt"
 strt
 echo "--------------------------------------------------------"
 echo
-echo "huutvpn scripted"
+echo "Terimakasih sudah menggunakan layanan Premium Huut-VPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -71,7 +68,7 @@ then
 limitspeed
 echo "--------------------------------------------------------"
 echo
-echo "huutvpn scripted"
+echo "Terimakasih sudah menggunakan layanan Premium Huut-VPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -81,7 +78,7 @@ then
 autobackup
 echo "--------------------------------------------------------"
 echo
-echo "huutvpn scripted"
+echo "Terimakasih sudah menggunakan layanan Premium Huut-VPN"
 echo
 echo "--------------------------------------------------------"
 fi
