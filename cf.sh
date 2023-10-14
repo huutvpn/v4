@@ -8,7 +8,7 @@ clear
 apt install jq curl -y
 sub=$(</dev/urandom tr -dc a-z | head -c4)
 DOMAIN=madurakocak.my.id
-SUB_DOMAIN=${sub}vip.madurakocak.my.id
+SUB_DOMAIN=${sub}-madurakocak.my.id
 CF_ID=shabudin039@gmail.com
 CF_KEY=746762286a7ac6f54e7c51565e2b19a4c1ab8
 set -euo pipefail
