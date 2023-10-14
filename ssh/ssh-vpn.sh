@@ -20,7 +20,7 @@ commonname=none
 email=adamspx17@gmail.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/huutvpn/v4/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/bracoli/v4/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -249,7 +249,7 @@ echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/huutvpn/v4/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -272,16 +272,15 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/huutvpn/v4/main/menu-vless.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/huutvpn/v4/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/clearcache.sh"
+wget -O clearcache "https://raw.githubusercontent.com/huutvpn/v4/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-trojan.sh"
 
 # menu ssh ovpn
-wget -O menu-sshh "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-sshh.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-ssh.sh"
 wget -O usernew "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/trial.sh"
 wget -O renew "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/renew.sh"
@@ -289,11 +288,9 @@ wget -O hapus "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/cek.sh"
 wget -O member "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/member.sh"
 wget -O delete "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/delete.sh"
-wget -O autokilll "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/autokilll.sh"
+wget -O autokill "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/tendang.sh"
-wget -O user-lock "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/user-lock.sh"
-wget -O user-unlock "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/user-unlock.sh"
 
 # menu system
 wget -O menu-set "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-set.sh"
@@ -303,11 +300,10 @@ wget -O port-change "https://raw.githubusercontent.com/huutvpn/v4/main/port/port
 wget -O certv2ray "https://raw.githubusercontent.com/huutvpn/v4/main/xray/certv2ray.sh"
 wget -O menu-webmin "https://raw.githubusercontent.com/huutvpn/v4/main/menu/menu-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.sh"
+wget -O about "https://raw.githubusercontent.com/huutvpn/v4/main/menu/about.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/huutvpn/v4/main/menu/auto-reboot.sh"
-wget -O restarts "https://raw.githubusercontent.com/huutvpn/v4/main/menu/restarts.sh"
+wget -O restart "https://raw.githubusercontent.com/huutvpn/v4/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/huutvpn/v4/main/menu/bw.sh"
-
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/huutvpn/v4/main/port/port-ssl.sh"
@@ -318,28 +314,16 @@ wget -O xp "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/xp.sh"
 wget -O acs-set "https://raw.githubusercontent.com/huutvpn/v4/main/acs-set.sh"
 
 wget -O sshws "https://raw.githubusercontent.com/huutvpn/v4/main/ssh/sshws.sh"
-wget -O status "https://raw.githubusercontent.com/huutvpn/v4/main/status.sh"
-wget -O menu-backup "https://raw.githubusercontent.com/huutvpn/v4/main/backup/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/huutvpn/v4/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/huutvpn/v4/main/backup/restore.sh"
-wget -O bot "https://raw.githubusercontent.com/huutvpn/v4/main/bot.sh"
-
-wget -O jam "https://raw.githubusercontent.com/huutvpn/v4/main/jam.sh"
-wget -O up "https://raw.githubusercontent.com/huutvpn/v4/main/up.sh"
 
 chmod +x menu
-chmod +x menu-trial
 chmod +x menu-vmess
 chmod +x menu-vless
 chmod +x running
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
-chmod +x user-lock
-chmod +x user-unlock
-chmod +x bot
 
-chmod +x menu-sshh
+chmod +x menu-ssh
 chmod +x usernew
 chmod +x trial
 chmod +x renew
@@ -347,7 +331,7 @@ chmod +x hapus
 chmod +x cek
 chmod +x member
 chmod +x delete
-chmod +x autokilll
+chmod +x autokill
 chmod +x ceklim
 chmod +x tendang
 
@@ -360,7 +344,7 @@ chmod +x menu-webmin
 chmod +x speedtest
 chmod +x about
 chmod +x auto-reboot
-chmod +x restarts
+chmod +x restart
 chmod +x bw
 
 chmod +x port-ssl
@@ -369,11 +353,6 @@ chmod +x port-ovpn
 chmod +x xp
 chmod +x acs-set
 chmod +x sshws
-chmod +x status
-chmod +x menu-backup
-chmod +x backup
-chmod +x restore
-chmod +x jam
 cd
 
 
