@@ -227,7 +227,10 @@ echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}        
 echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
 echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} INSTALL BOT VPS${NC} "                 
 echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
-echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} SETTING BOT${NC} "   
+echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} SETTING BOT${NC} " 
+echo -e "${BICyan} │${NC}${BICyan} [•13]${NC}📨 ${white} BACKUP BOT${NC}    " "${BICyan}[15]${NC}📨 ${white} MENU SETINGkS${NC} "
+echo -e "${BICyan} │${NC}${BICyan} [•14]${NC}📨 ${white} TELE BOT${NC}  " "${BICyan}[16]${NC}📨 ${white} SETTING BOkT${NC} " 
+
 echo -e "${BICyan} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -257,6 +260,8 @@ case $opt in
 10) clear ; wget https://raw.githubusercontent.com/huutvpn/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 11) clear ; menu-set ;;
 12) clear ; bot ;;
+13) clear ; mbot-backup ;;
+14) clear ; m-bot ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
