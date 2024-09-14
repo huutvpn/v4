@@ -194,7 +194,7 @@ clear
 ### Pasang Rclone
 function pasang_backup() {
     judge "Memasang backup server"
-    wget https://raw.githubusercontent.com/artanodrop/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/huutvpn/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
     print_success "backup server"
 }
 
@@ -252,7 +252,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ HUUT-VPN GROUP ]-===================="
+echo "=====================-[ BADBUDVPN GROUP ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -293,7 +293,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script By HUUT-VPN ]-==============="
+echo "===============-[ Script By BADBUDVPN ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
